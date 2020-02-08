@@ -31,8 +31,6 @@ app.get("/drinks/:id", (req, res) => {
     })
 })
 
-
-
 app.post('/drinks/register', (req, res) => {
     const drink = new Drink(req.body)
     drink.save((err, doc) => {
@@ -45,4 +43,3 @@ app.post('/drinks/register', (req, res) => {
 })
 
 app.listen(port, () => console.log(`Servidor corriendo en el puerto: ${port}`));
-
