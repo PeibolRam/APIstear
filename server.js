@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const  Drink = require('./models/drinks')
-const port = 3002;
+const port = 5000;
 
 const app = express();
 
