@@ -4,7 +4,11 @@ const Schema = mongoose.Schema;
 const ingredienteSchema = new Schema({
     nombre: String,
     cantidad: String
-  })
+})
+
+const marcasSchema = new Schema({
+    nombre: String
+})
 
 const DrinkSchema = new Schema({
     id: {
@@ -36,9 +40,6 @@ const DrinkSchema = new Schema({
         type: String,
         required: true
     },
-    tipo: {
-        type: String,
-        required: false
-    }
+    marcas: [marcasSchema],
 });
 module.exports = Drink = mongoose.model("drinks", DrinkSchema);
