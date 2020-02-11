@@ -1,15 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const ingredienteSchema = new Schema({
-    nombre: String,
-    cantidad: String
-})
-
-const marcasSchema = new Schema({
-    nombre: String
-})
-
 const DrinkSchema = new Schema({
     id: {
         type: Number,
@@ -19,7 +10,20 @@ const DrinkSchema = new Schema({
         type: String,
         required: true
     },
-    ingredientes: [ingredienteSchema],
+    ingredientes: [
+        {
+           nombre: {
+                type:String
+            },
+            cantidad:{
+                type:String
+            }
+        }
+    ],
+    instrucciones: {
+        type: String,
+        required: false
+    },
     situacion: {
         type: String,
         required: false
@@ -39,7 +43,6 @@ const DrinkSchema = new Schema({
     base: {
         type: String,
         required: true
-    },
-    marcas: [marcasSchema],
+    }
 });
 module.exports = Drink = mongoose.model("drinks", DrinkSchema);

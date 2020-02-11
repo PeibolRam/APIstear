@@ -1,11 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const  Drink = require('./models/drinks')
+
+const Drink = require('./models/drinks');
+const User = require('./models/users')
+
 const port = 5000;
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/chupapi', { useNewUrlParser: true,  useUnifiedTopology: true }, (err) => {
+require('dotenv').config()
+
+mongoose.connect(process.env.DATABASE, { useNewUrlParser: true,  useUnifiedTopology: true }, (err) => {
 	if (err) {
 		console.log('Conectate a mongo primero');
 		return err;
@@ -16,6 +21,20 @@ mongoose.connect('mongodb://localhost:27017/chupapi', { useNewUrlParser: true,  
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
+//Rutas users
+app.post('/users/register', (req, res) => {
+    const user = new User(req.body)
+    user.save((err, doc) => {
+        if(err) return res.json({success: false, err})
+        res.status(200).json({
+            success: true,
+            userdata: doc
+        })
+    })
+})
+//fin rutas users
+
+//Rutas drinks
 app.get('/drinks', (req, res)=> {
     Drink.find({}, (err, drinks) => { 
 		if(err) return res.status(400).send(err)
@@ -25,7 +44,6 @@ app.get('/drinks', (req, res)=> {
 
 app.get("/drinks/:id", (req, res) => {
     const bebida = req.params.id
-
     Drink.find({id:bebida}).then(drink => {
         res.send(drink)
     })
@@ -41,5 +59,6 @@ app.post('/drinks/register', (req, res) => {
         })
     })
 })
+//fin rutas drinks
 
 app.listen(port, () => console.log(`Servidor corriendo en el puerto: ${port}`));

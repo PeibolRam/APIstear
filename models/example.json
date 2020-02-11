@@ -1,0 +1,17 @@
+{
+    "id": 3,
+    "nombre": "Cerveza",
+    "ingrediente": [
+        {
+            "nombre":"ingrediente1",
+            "canridad":"cantidad1"
+        },
+        {
+            "nombre":"ingrediente2",
+            "cantidad":"cantidad2" 
+        }
+    ],
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/6/63/Helles_im_Glas-Helles_%28pale_beer%29.jpg",
+    "base": "Cerveza",
+    "instrcciones":"Todas las instrucciones"
+}
