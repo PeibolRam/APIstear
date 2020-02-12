@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
+const cors = require('cors')
 const Drink = require('./models/drinks');
 const User = require('./models/users')
 
@@ -20,6 +20,7 @@ mongoose.connect(process.env.DATABASE, { useNewUrlParser: true,  useUnifiedTopol
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
+app.use(cors())
 
 //Rutas users
 app.post('/users/register', (req, res) => {
@@ -42,9 +43,23 @@ app.get('/drinks', (req, res)=> {
 	})
 })
 
-app.get("/drinks/:id", (req, res) => {
+app.get("/drinks/id/:id", (req, res) => {
     const bebida = req.params.id
     Drink.find({id:bebida}).then(drink => {
+        res.send(drink)
+    })
+})
+
+app.get("/drinks/nombre/:nombre", (req, res) => {
+    const bebida = req.params.nombre
+    Drink.find({nombre:bebida}).then(drink => {
+        res.send(drink)
+    })
+})
+
+app.get("/drinks/base/:base", (req, res) => {
+    const bebida = req.params.base
+    Drink.find({base:bebida}).then(drink => {
         res.send(drink)
     })
 })

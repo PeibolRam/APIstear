@@ -10,6 +10,10 @@ const DrinkSchema = new Schema({
         type: String,
         required: true
     },
+    descripcion: {
+        type: String,
+        required: true
+    },
     ingredientes: [
         {
            nombre: {

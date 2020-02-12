@@ -1,17 +1,21 @@
 {
-    "id": 3,
-    "nombre": "Cerveza",
-    "ingrediente": [
+	"id": 0,
+	"nombre":"example",
+	"descripcion":"descripcion completa de la bebida",
+	"ingredientes": [
         {
             "nombre":"ingrediente1",
-            "canridad":"cantidad1"
+            "cantidad":"cantidad1"
         },
         {
             "nombre":"ingrediente2",
             "cantidad":"cantidad2" 
         }
     ],
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/6/63/Helles_im_Glas-Helles_%28pale_beer%29.jpg",
-    "base": "Cerveza",
-    "instrcciones":"Todas las instrucciones"
+    "instrucciones":"Todas las instrucciones",
+    "situacion":"Cuando es buena idea tomarlo",
+    "recomendacion":"Con que acompañarlo",
+    "origen": "Donde nació",
+    "imagen":"URL de la imagen",
+    "base":"Bebida base para el coctel"
 }
