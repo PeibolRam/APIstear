@@ -24,10 +24,16 @@ const DrinkSchema = new Schema({
             }
         }
     ],
-    instrucciones: {
-        type: String,
-        required: false
-    },
+    instrucciones: [
+        {
+            numero:{
+                type: Number
+            },
+            paso:{
+                type: String
+            }
+        }
+    ],
     situacion: {
         type: String,
         required: false

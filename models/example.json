@@ -12,7 +12,20 @@
             "cantidad":"cantidad2" 
         }
     ],
-    "instrucciones":"Todas las instrucciones",
+    "instrucciones":[
+        {
+            "numero": 1,
+            "paso": "primer paso de las instrucciones"
+        },
+        {
+            "numero": 2,
+            "paso": "segundo paso de las instrucciones"
+        },
+        {
+            "numero": 3,
+            "paso": "tercer paso de las instrucciones"
+        }
+    ],
     "situacion":"Cuando es buena idea tomarlo",
     "recomendacion":"Con que acompañarlo",
     "origen": "Donde nació",
