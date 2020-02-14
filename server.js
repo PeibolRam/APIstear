@@ -20,6 +20,7 @@ mongoose.connect(process.env.DATABASE, { useNewUrlParser: true,  useUnifiedTopol
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
+app.use('/public', express.static('public'));
 app.use(cors())
 
 //Rutas users

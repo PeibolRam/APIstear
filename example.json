@@ -1,0 +1,54 @@
+{
+	"id": 4,
+	"nombre":"Daiquiri",
+	"descripcion":"Es refrescante, exótica y muy buena opción para beberla debajo de una palmera con buena música",
+	"ingredientes": [
+        {
+            "nombre":"Ron",
+            "cantidad":"1½ a 2 onzas"
+        },
+        {
+            "nombre":"Jugo de Limón o Lima",
+            "cantidad":"1 onza" 
+        },
+        {
+            "nombre":"Azúcar",
+            "cantidad":"1/2 cucharadita"
+        },
+        {
+            "nombre":"Hielo triturado",
+            "cantidad":"al gusto"
+        },
+        {
+            "nombre":"Lima en rebanadas para decorar",
+            "cantidad":"al gusto"
+        }
+    ],
+    "instrucciones": [
+        {
+            "numero": 1,
+            "paso": "Combina los ingredientes excepto la lima para decorar dentro de una coctelera con cubos de hielo."
+        },
+        {
+            "numero": 2,
+            "paso": "Agita muy bien por unos segundos para que la mezcla se enfríe con el hielo."
+        },
+        {
+            "numero": 3,
+            "paso": "Cuela (lo ideal es una coctelera que tenga como opción una tapita estilo colador) y sirve en un vaso o copa de vidrio (si el vaso está refrigerado mejor) que contenga hielo triturado (3/4 del vaso)."
+        },
+        {
+            "numero": 4,
+            "paso": "Decora el vaso con una rodaja de lima."
+        },
+        {
+            "numero": 5,       
+            "paso": "RECOMENDACIONES: El Daiquiri clásico o tradicional es ligeramente ácido, así que si te gustan las bebidas un poco más dulces, aumenta la cantidad de azúcar.Para preparar un Daiquiri tradicional se utiliza el ron blanco, pero también puedes hacerlo con el tipo de ron (blanco, dorado, añejo u otro) que prefieras. Es cuestión de gusto."
+        }
+    ],
+    "situacion":"En verano en la playa",
+    "recomendacion":"Con un coctel de camaron, unos ostiones",
+    "origen": "Santiago de Cuba",
+    "imagen":"https://media.alamesacuba.com/media/mce_filebrowser/2017/08/28/La-historia-del-Daiquiri_1_AlaMesaCuba.jpg",
+    "base":"ron blanco"
+}

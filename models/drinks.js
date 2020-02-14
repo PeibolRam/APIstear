@@ -20,7 +20,8 @@ const DrinkSchema = new Schema({
                 type:String
             },
             cantidad:{
-                type:String
+                type:String,
+                default:"Al gusto"
             }
         }
     ],
