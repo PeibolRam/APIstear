@@ -4,7 +4,7 @@ const cors = require('cors')
 const Drink = require('./models/drinks');
 const User = require('./models/users')
 
-const port = 5000;
+const port = 3003;
 
 const app = express();
 
@@ -44,9 +44,9 @@ app.get('/drinks', (req, res)=> {
 	})
 })
 
-app.get("/drinks/id/:id", (req, res) => {
-    const bebida = req.params.id
-    Drink.find({id:bebida}).then(drink => {
+app.get("/drinks/id/:_id", (req, res) => {
+    const bebida = req.params._id
+    Drink.find({_id:bebida}).then(drink => {
         res.send(drink)
     })
 })
